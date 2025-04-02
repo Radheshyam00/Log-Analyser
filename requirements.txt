@@ -1,0 +1,13 @@
+pandas
+numpy
+seaborn
+scikit-learn
+matplotlib
+streamlit
+apache-log-parser
+requests folium
+streamlit-folium
+pydeck
+altair
+plotly
+ipwhois
