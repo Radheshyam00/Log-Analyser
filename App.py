@@ -24,6 +24,7 @@ import plotly.express as px
 from ipwhois import IPWhois
 from sklearn.preprocessing import StandardScaler
 import ipaddress
+from dotenv import load_dotenv
 
 
 # Define the Apache log line parser
@@ -1003,7 +1004,7 @@ def main():
                     ip_input = st.text_input("Enter an IP address:", placeholder="e.g., 8.8.8.8")
                     
                     # Your IPinfo API key
-                    api_key = '7529e8383ba7f8'  # Replace with your actual API key
+                    api_key = os.getenv("API_KEY")  # Replace with your actual API key
                     
                     # Regex pattern to validate IP address
                     ip_pattern = re.compile(r"^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\."
