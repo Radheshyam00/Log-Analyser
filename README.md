@@ -1,15 +1,16 @@
 # Log Analyzer
 
 ## Overview
-The **Log Analyzer** is a powerful tool designed to parse, analyze, and visualize log files efficiently. It provides insightful data regarding system logs, security logs, and application logs, helping users identify patterns, detect anomalies, and troubleshoot issues.
+The **Log Analyzer** is a powerful tool designed to parse, analyze, and visualize Apache server access logs efficiently. It provides insightful data regarding web traffic, user behavior, and potential security threats by analyzing access logs.
 
 ## Features
-- **Log Parsing:** Supports multiple log formats (JSON, CSV, plain text, etc.).
+- **Log Parsing:** Supports Apache server access logs in common formats.
 - **Real-Time Analysis:** Processes logs dynamically and provides instant insights.
-- **Filtering & Search:** Enables searching and filtering logs based on keywords, timestamps, or severity levels.
+- **Filtering & Search:** Enables searching and filtering logs based on keywords, timestamps, or status codes.
 - **Visualization:** Displays logs in an intuitive UI using charts and tables.
 - **Alerts & Notifications:** Detects anomalies and sends alerts based on predefined rules.
 - **User Authentication:** Secure access to log data with role-based permissions.
+- **IP Geolocation Lookup:** Uses the ipinfo API to fetch geolocation details of IP addresses found in logs.
 
 ## Tech Stack
 - **Programming Language:** Python
@@ -17,11 +18,13 @@ The **Log Analyzer** is a powerful tool designed to parse, analyze, and visualiz
 - **Libraries & Tools:**
   - Pandas (log processing)
   - Matplotlib/Plotly (data visualization)
+  - Requests (API integration with ipinfo.io)
 
 ## Installation
 ### Prerequisites
 - Python 3.8+
 - Virtual Environment (optional but recommended)
+- ipinfo API Key (Sign up at [ipinfo.io](https://ipinfo.io/))
 
 ### Setup
 1. **Clone the repository:**
@@ -36,22 +39,26 @@ The **Log Analyzer** is a powerful tool designed to parse, analyze, and visualiz
    source venv/bin/activate  # Activate (Linux/macOS)
    venv\Scripts\activate  # Activate (Windows)
    pip install -r requirements.txt  # Install dependencies
-   streamlit run app.py  # Start the server
+   export IPINFO_API_KEY="your_api_key_here"  # Set API Key (Linux/macOS)
+   set IPINFO_API_KEY="your_api_key_here"  # Set API Key (Windows)
+   streamlit run App.py  # Start the server
    ```
 
 ## Usage
 - Access the API at `http://localhost:5000`.
-- Upload log files or connect to live log sources.
+- Upload Apache access log files for analysis.
 - Use filters and search to analyze log data.
 - View logs in table format or interactive charts.
+- Retrieve geolocation details of IP addresses from logs using ipinfo.
 
 ## API Endpoints
 | Method | Endpoint | Description |
 |--------|---------|-------------|
 | GET | `/logs` | Fetch all logs |
-| POST | `/upload` | Upload a log file |
+| POST | `/upload` | Upload an Apache access log file |
 | GET | `/logs?filter=error` | Filter logs by keyword |
 | GET | `/logs/:id` | Fetch log details by ID |
+| GET | `/ipinfo/:ip` | Fetch geolocation details of an IP address using ipinfo API |
 
 ## Contributing
 1. Fork the repository.
