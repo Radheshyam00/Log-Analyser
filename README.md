@@ -53,6 +53,19 @@ The **Log Analyzer** is a powerful tool designed to parse, analyze, and visualiz
 | GET | `/logs?filter=error` | Filter logs by keyword |
 | GET | `/logs/:id` | Fetch log details by ID |
 
+## SARIMA for Traffic Forecasting in Log Analysis
+SARIMA is suitable for time-series data with seasonal patterns, which is often the case in log data (e.g., higher traffic during business hours). The model handles:
+- Autoregressive and moving average trends
+- Differencing for stationarity
+- Seasonal effects (e.g., daily, weekly traffic cycles)
+Model Notation:
+```bash
+   SARIMA(p, d, q)(P, D, Q, s)
+   ```
+Where:
+- (p, d, q) are the non-seasonal parameters
+- (P, D, Q, s) are the seasonal parameters, with s being the seasonal cycle length (e.g., 24 for hourly data in a day)
+
 ## Contributing
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature-branch`
@@ -65,4 +78,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## Contact
 For support or inquiries, contact **portfolio-radhe00.vercel.app** or open an issue on GitHub.
+
+
+
 
