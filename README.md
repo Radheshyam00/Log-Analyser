@@ -74,7 +74,7 @@ Where:
 - (p, d, q) are the non-seasonal parameters
 - (P, D, Q, s) are the seasonal parameters, with s being the seasonal cycle length (e.g., 24 for hourly data in a day)
 
-**Run SARIMA Model**
+**Run SARIMA Model:**
 ```bash
    streamlit run mTrain.py
    ```
