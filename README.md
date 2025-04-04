@@ -65,6 +65,7 @@ SARIMA is suitable for time-series data with seasonal patterns, which is often t
 - Autoregressive and moving average trends
 - Differencing for stationarity
 - Seasonal effects (e.g., daily, weekly traffic cycles)
+
 Model Notation:
 ```bash
    SARIMA(p, d, q)(P, D, Q, s)
@@ -72,6 +73,12 @@ Model Notation:
 Where:
 - (p, d, q) are the non-seasonal parameters
 - (P, D, Q, s) are the seasonal parameters, with s being the seasonal cycle length (e.g., 24 for hourly data in a day)
+
+**Run SARIMA Model**
+```bash
+   streamlit run mTrain.py
+   ```
+
 
 ## Contributing
 1. Fork the repository.
