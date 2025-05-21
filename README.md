@@ -88,7 +88,9 @@ Where:
 5. Submit a pull request.
 
 ## Demo
-1. [SARIMA](https://sarima-model.streamlit.app/)
+
+1. ![Log Analyzer](https://log-analyser-c3cjt8wcknel7pecdsjxh3.streamlit.app/)
+2. ![SARIMA Model](https://sarima-model.streamlit.app/)
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
