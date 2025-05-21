@@ -12,3 +12,4 @@ altair
 plotly
 ipwhois
 dotenv
+statsmodels
