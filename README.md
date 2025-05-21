@@ -87,6 +87,9 @@ Where:
 4. Push to the branch: `git push origin feature-branch`
 5. Submit a pull request.
 
+## Demo
+1. [SARIMA](https://sarima-model.streamlit.app/)
+
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
